@@ -85,7 +85,7 @@ function autocomplete(input, latInput, lngInput) {
   dropdown.addListener('place_changed', function () {
     var place = dropdown.getPlace();
     latInput.value = place.geometry.location.lat();
-    latInput.value = place.geometry.location.lng();
+    lngInput.value = place.geometry.location.lng();
   });
 
   input.on('keydown', function (e) {
@@ -150,7 +150,7 @@ var _autocomplete2 = _interopRequireDefault(_autocomplete);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(0, _autocomplete2.default)((0, _bling.$)('#address'), (0, _bling.$)('#lng'), (0, _bling.$)('#lng'));
+(0, _autocomplete2.default)((0, _bling.$)('#address'), (0, _bling.$)('#lat'), (0, _bling.$)('#lng'));
 
 /***/ })
 /******/ ]);

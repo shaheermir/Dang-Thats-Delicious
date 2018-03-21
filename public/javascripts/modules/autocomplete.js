@@ -7,7 +7,7 @@ function autocomplete(input, latInput, lngInput) {
   dropdown.addListener('place_changed', () => {
     const place = dropdown.getPlace()
     latInput.value = place.geometry.location.lat()
-    latInput.value = place.geometry.location.lng()
+    lngInput.value = place.geometry.location.lng()
   })
 
   input.on('keydown', e => {
